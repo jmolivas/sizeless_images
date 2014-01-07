@@ -1,0 +1,6 @@
+name = "Sizeless Images"
+description = "Removes size from image markup inserted by Drupal."
+core = 7.x
+
+; Add the javascript to clean up scaling in IE
+scripts[] = imgSizer.js

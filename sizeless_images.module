@@ -1,0 +1,18 @@
+<?php
+/**
+ * @file
+ *
+ * Sizeless images
+ * Intercepts images themed by the system 
+ * Removes the the size values, 
+ * intended to be used with responsive designs that require no width or height on field values
+ *
+ * See chx's comment at 
+ * http://drupal.stackexchange.com/questions/14866/drupal-7-9-and-flexible-images
+ */
+ 
+
+function sizeless_images_preprocess_image(&$variables) {
+  unset ($variables['width'], $variables['attributes']['width']);
+  unset ($variables['height'], $variables['attributes']['height']);
+}
